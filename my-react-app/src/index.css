@@ -1,0 +1,176 @@
+:root {
+  --font-family: "Space Grotesk";
+
+  /* Colors */
+  --primary-color: #b9ff66;
+  --secondary-color: #191a23;
+  --accent-color: #f3f3f3;
+
+  /* Desktop font sizes */
+  --desktop-fz-h1: 6rem;
+  --desktop-fz-h2: 4rem;
+  --desktop-fz-h3: 3rem;
+  --desktop-fz-h4: 2rem;
+  --desktop-paragraph: 1.8rem;
+  --desktop-btn: 1.8rem;
+
+  /* Mobile font sizes */
+  --mobile-fz-h1: 4.3rem;
+  --mobile-fz-h2: 3.6rem;
+  --mobile-fz-h3: 2.6rem;
+  --mobile-fz-h4: 1.8rem;
+  --mobile-paragraph: 1.6rem;
+  --mobile-btn: 1.6rem;
+
+  /* Shadows */
+  --bg-shadow: 2px 0 1px var(--secondary-color);
+
+  /* spacing */
+  --margin-desktop: 4rem;
+  --padding-desktop: 4rem;
+  --margin-mobile: 3rem;
+  --padding-mobile: 3rem;
+
+  /* font-weights */
+  --bold: 700;
+  --semi-bold: 600;
+  --regular: 500;
+
+  --transition: all 0.2s ease-in;
+  --shadow: 0px 12px 20px rgba(0, 0, 0, 0.105),
+    0px 6px 12px rgba(0, 0, 0, 0.105), 0px 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family);
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) var(--secondary-color);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d9d9d9;
+}
+
+body {
+  background: #ffffff;
+}
+
+h1 {
+  font-size: var(--mobile-fz-h1);
+  font-weight: var(--bold);
+}
+
+h2 {
+  font-size: var(--mobile-fz-h2);
+  font-weight: var(--bold);
+}
+
+h3 {
+  font-size: var(--mobile-fz-h3);
+  font-weight: var(--bold);
+}
+
+h4 {
+  font-size: var(--mobile-fz-h4);
+  font-weight: var(--bold);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+.description {
+  font-size: var(--mobile-paragraph);
+  line-height: 1.5;
+}
+
+.btn__big {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: var(--margin-mobile);
+  border-radius: 10px;
+  font-size: var(--mobile-btn);
+  padding: 2rem 2.4rem;
+  transition: var(--transition);
+  font-weight: var(--semi-bold);
+}
+
+.btn__big:hover {
+  background: var(--primary-color);
+  box-shadow: var(--shadow);
+  color: var(--secondary-color);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 720px) {
+  h1 {
+    font-size: var(--desktop-fz-h1);
+    font-weight: var(--bold);
+  }
+
+  h2 {
+    font-size: var(--desktop-fz-h2);
+    font-weight: var(--bold);
+  }
+
+  h3 {
+    font-size: var(--desktop-fz-h3);
+    font-weight: var(--bold);
+  }
+
+  h4 {
+    font-size: var(--desktop-fz-h4);
+    font-weight: var(--bold);
+  }
+
+  .description {
+    font-size: var(--desktop-paragraph);
+  }
+
+  .btn__big {
+    font-size: var(--desktop-btn);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.1;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 1728px;
+  }
+}
